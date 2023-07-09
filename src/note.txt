@@ -1,0 +1,85 @@
+// function App() {
+
+//   const [newTask, setNewTask] = useState('')
+//   const [todoList, setTodoList] = useState([])
+
+//   const handleChange = (event)=>{
+//     setNewTask(event.target.value)
+//   }
+
+//   const handleClick = ()=>{
+//     const task ={
+//       id : todoList.length === 0 ? 1 : todoList[todoList.length -1].id + 1,
+//       taskName: newTask
+//     }
+//     setTodoList([...todoList, task])
+//   }
+
+//   const deleteTask =(id)=>{
+
+//     setTodoList(todoList.filter((task)=>{
+//       return task.id !== id
+//     }))
+
+//     }
+
+//   return (
+//     <div className="App">
+//       <div className="addTask">
+//         <input type="text" onChange={handleChange} />
+//         <button onClick={handleClick}>Add Task</button>
+//       </div>
+//       <div className="list">
+//         {todoList.map((task)=>{
+//           return (
+//             <div>
+//               <h1> {task.taskName} </h1>
+//               <button onClick={()=>deleteTask(task.id)}> X </button>
+//             </div>
+//           );
+//         })}
+//       </div>
+//     </div>
+//   );
+// }
+
+// function App() {
+//   const [toggleText, setToggleText] = useState(false)
+
+//   const handleClick = ()=>{
+//     setToggleText(!toggleText)
+//   }
+//   return (
+//     <div className="App">
+//       <button onClick={handleClick}>Show Text</button>
+//       {toggleText && <Text />}
+//     </div>
+//   )
+// }
+
+
+
+  // fetch("https://catfact.ninja/fact").then((res)=>res.json())
+  // .then((data)=>{
+  //   console.log(data)
+  // })
+
+//   const [catfact, setCatFact]=useState('')
+
+//   const fetchCatFact = ()=>{
+//   axios("https://catfact.ninja/fact").then((res) => {
+//   setCatFact(res.data.fact);
+// });
+//   }
+
+//  useEffect(()=>{
+//    fetchCatFact()
+//  }, [])
+
+  const [generateExcuse, setGenerateExcuse] = useState('')
+
+  const handleExcuse = (excuse) =>{
+    axios.get(`https://excuser-three.vercel.app/v1/excuse/${excuse}/`).then((res)=>{
+      setGenerateExcuse(res.data[0].excuse)
+    });
+  }
