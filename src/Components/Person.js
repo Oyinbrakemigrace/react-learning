@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function Person(props) {
   return (
@@ -12,6 +13,14 @@ function Person(props) {
       })} </h3>
     </div>
   );
+}
+
+Person.propTypes = {
+  Name : PropTypes.string,
+  Email : PropTypes.string,
+  Age: PropTypes.number,
+  Married : PropTypes.bool,
+  Friends : PropTypes.arrayOf(PropTypes.string)
 }
 
 export default Person
