@@ -50,3 +50,16 @@ form input{
     transform: rotate(360deg);
   }
 }
+
+
+.board{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  margin-top: 10rem ;
+  width: 30%;
+}
+
+.box{
+  padding: 3rem 1rem;
+}
