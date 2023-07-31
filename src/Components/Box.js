@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Box = (props) => {
+const Box = ({value, handleBoxClick}) => {
   return (
-    <button className='box'>{props.value}</button>
-  )
+    <button className="box" onClick={handleBoxClick}>
+      {value}
+    </button>
+  );
 }
 
 export default Box

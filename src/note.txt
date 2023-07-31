@@ -83,3 +83,4 @@
       setGenerateExcuse(res.data[0].excuse)
     });
   }
+ 

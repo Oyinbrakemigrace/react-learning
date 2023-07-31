@@ -3,17 +3,25 @@ import Box from './Box'
 
 const GameBoard = () => {
     const [boxValue, setBoxValue] = useState(Array(9).fill(null))
+
+    const handleClick = (i)=>{
+        const eachBoxClick = boxValue.slice()
+        eachBoxClick[i] = 'X'
+        setBoxValue(eachBoxClick)
+    }
+
+
   return (
     <div className='board'>
-        <Box value = {boxValue[0]} />
-        <Box value = {boxValue[1]} />
-        <Box value = {boxValue[2]} />
-        <Box value = {boxValue[3]} />
-        <Box value = {boxValue[4]} />
-        <Box value = {boxValue[5]} />
-        <Box value = {boxValue[6]} />
-        <Box value = {boxValue[7]} />
-        <Box value = {boxValue[8]} />
+        <Box value = {boxValue[0]} handleBoxClick={()=> handleClick(0)} />
+        <Box value = {boxValue[1]} handleBoxClick={()=> handleClick(1)} />
+        <Box value = {boxValue[2]} handleBoxClick={()=> handleClick(2)} />
+        <Box value = {boxValue[3]} handleBoxClick={()=> handleClick(3)} />
+        <Box value = {boxValue[4]} handleBoxClick={()=> handleClick(4)} />
+        <Box value = {boxValue[5]} handleBoxClick={()=> handleClick(5)} />
+        <Box value = {boxValue[6]} handleBoxClick={()=> handleClick(6)} />
+        <Box value = {boxValue[7]} handleBoxClick={()=> handleClick(7)} />
+        <Box value = {boxValue[8]} handleBoxClick={()=> handleClick(8)} />
     </div>
   )
 }
