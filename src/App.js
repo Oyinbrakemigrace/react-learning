@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import TheUseRefHook from "./HooksLearning/theUseRefHook";
 // import Login from "./Components/Login";
 // import Profile from "./Components/Profile";
 // import ChangeColor from "./Components/ChangeColor";
 // import ChangeProfile from "./Components/ChangeProfile";
-import GameBoard from "./Components/GameBoard";
+//import GameBoard from "./Components/GameBoard";
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       <Login />
       <ChangeColor/>
       <ChangeProfile/> */}
-      <GameBoard/>
+      {/* <GameBoard/> */}
+      <TheUseRefHook />
     </div>
   );
 }
