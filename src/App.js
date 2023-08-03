@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import TheUseRefHook from "./HooksLearning/theUseRefHook";
+// import TheUseReducerHook from "./HooksLearning/theUseEffectHook";
+import TheUseEffectHook from "./HooksLearning/theUseEffectHook";
 // import Login from "./Components/Login";
 // import Profile from "./Components/Profile";
 // import ChangeColor from "./Components/ChangeColor";
@@ -9,7 +10,6 @@ import TheUseRefHook from "./HooksLearning/theUseRefHook";
 
 
 function App() {
-
   return (
     <div className="App">
       {/* <Profile />
@@ -17,7 +17,7 @@ function App() {
       <ChangeColor/>
       <ChangeProfile/> */}
       {/* <GameBoard/> */}
-      <TheUseRefHook />
+      <TheUseEffectHook />
     </div>
   );
 }
