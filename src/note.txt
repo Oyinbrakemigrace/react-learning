@@ -71,7 +71,6 @@
 //   setCatFact(res.data.fact);
 // });
 //   }
-
 //  useEffect(()=>{
 //    fetchCatFact()
 //  }, [])

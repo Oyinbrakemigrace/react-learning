@@ -8,12 +8,14 @@ import "./App.css";
 // import ChangeProfile from "./Components/ChangeProfile";
 //import GameBoard from "./Components/GameBoard";
 import TheUseRefHook from "./HooksLearning/theUseRefHook";
+import Timer from "./Components/Timer";
 
 
 function App() {
   return (
     <div className="App">
-      <TheUseRefHook />
+      {/* <TheUseRefHook /> */}
+      <Timer />
     </div>
   );
 }
